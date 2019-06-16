@@ -14,12 +14,13 @@ var load_counter = 0;
 // Initialize images for layers
 var background = new Image();
 var shadows = new Image();
-var clouds = new Image();
+var sea = new Image();
 var floaties_1 = new Image();
-var floaties_2 = new Image();
+var tenticles = new Image();
+var plants = new Image();
 var mask = new Image();
-var humans = new Image();
-var floaties_3 = new Image();
+var jellyfish = new Image();
+var floaties_2 = new Image();
 
 // Create a list of layer objects
 // Each object contains the following:
@@ -39,11 +40,11 @@ var layer_list = [
 		'opacity': 1
 	},
 	{
-		'image': clouds,
+		'image': sea,
 		'src': './images/layer_2_1.png',
 		'z_index': -2,
 		'position': {x: 0, y: 0},
-		'blend': null,
+		'blend': 'screen',
 		'opacity': 1
 	},
 	{
@@ -51,15 +52,23 @@ var layer_list = [
 		'src': './images/layer_3_1.png',
 		'z_index': -1.25,
 		'position': {x: 0, y: 0},
-		'blend': 'overlay',
+		'blend': 'lighten',
 		'opacity': 1
 	},
 	{
-		'image': floaties_2,
+		'image': tenticles,
 		'src': './images/layer_4_1.png',
 		'z_index': -0.5,
 		'position': {x: 0, y: 0},
-		'blend': 'overlay',
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': plants,
+		'src': './images/layer_9_1.png',
+		'z_index': -0.15,
+		'position': {x: 0, y: 0},
+		'blend': null,
 		'opacity': 1
 	},
 	{
@@ -68,7 +77,7 @@ var layer_list = [
 		'z_index': -1.25,
 		'position': {x: 0, y: 0},
 		'blend': 'multiply',
-		'opacity': 0.75
+		'opacity': 1
 	},
 	{
 		'image': mask,
@@ -79,20 +88,20 @@ var layer_list = [
 		'opacity': 1
 	},
 	{
-		'image': humans,
+		'image': jellyfish,
 		'src': './images/layer_7_1.png',
 		'z_index': 0.8,
 		'position': {x: 0, y: 0},
-		'blend': null,
+		'blend': 'lighten',
 		'opacity': 1
 	},
 	{
-		'image': floaties_3,
+		'image': floaties_2,
 		'src': './images/layer_8_1.png',
 		'z_index': 2,
 		'position': {x: 0, y: 0},
 		'blend': null,
-		'opacity': 0.9
+		'opacity': 1
 	}
 ];
 

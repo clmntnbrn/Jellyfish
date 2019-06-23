@@ -172,13 +172,13 @@ function drawCanvas() {
 function getOffset(layer) {
 	// Calculate the amount you want the layers to move based on touch or mouse input.
 	// You can play with the touch_multiplier variable here. Depending on the size of your canvas you may want to turn it up or down.
-	var touch_multiplier = 0.3;
+	var touch_multiplier = 0.1;
 	var touch_offset_x = pointer.x * layer.z_index * touch_multiplier;
 	var touch_offset_y = pointer.y * layer.z_index * touch_multiplier;
 	
 	// Calculate the amount you want the layers to move based on the gyroscope
 	// You can play with the motion_multiplier variable here. Depending on the size of your canvas you may want to turn it up or down.
-	var motion_multiplier = 2.5;
+	var motion_multiplier = 1.5;
 	var motion_offset_x = motion.x * layer.z_index * motion_multiplier;
 	var motion_offset_y = motion.y * layer.z_index * motion_multiplier;
 	
